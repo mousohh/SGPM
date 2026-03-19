@@ -17,7 +17,12 @@ export default function App() {
     const maquinaGuardada = sessionStorage.getItem('maquina_turno')
 
     if (token && usuarioGuardado) {
-      setUsuario(JSON.parse(usuarioGuardado))
+      try {
+        setUsuario(JSON.parse(usuarioGuardado))
+      } catch {
+        localStorage.removeItem('token')
+        localStorage.removeItem('usuario')
+      }
     }
     if (maquinaGuardada) {
       try { setMaquinaSeleccionada(JSON.parse(maquinaGuardada)) } catch {}
@@ -28,7 +33,12 @@ export default function App() {
   const handleLogin = () => {
     const usuarioGuardado = localStorage.getItem('usuario')
     if (usuarioGuardado) {
-      setUsuario(JSON.parse(usuarioGuardado))
+      try {
+        setUsuario(JSON.parse(usuarioGuardado))
+      } catch {
+        localStorage.removeItem('token')
+        localStorage.removeItem('usuario')
+      }
       setMaquinaSeleccionada(null)
       sessionStorage.removeItem('maquina_turno')
     }

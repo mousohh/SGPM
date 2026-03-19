@@ -468,8 +468,8 @@ const resumenInicio = async (req, res) => {
       { replacements: { hoy }, type: QueryTypes.SELECT }
     )
 
-    const estado = maquinasEstado[0]
-    const turno = disponibilidadTurno[0]
+    const estado = maquinasEstado[0] || { total_maquinas: 0, maquinas_paradas: 0 }
+    const turno = disponibilidadTurno[0] || { disponibilidad_pct: 0, total_paros: 0, minutos_perdidos: 0, costo_perdido: 0 }
 
     res.json({
       turnoNombre,
