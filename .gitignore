@@ -17,3 +17,8 @@ npm-debug.log*
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
+# Archivos de notas personales
+apuntes.txt
+base de datos.txt
+*.txt
