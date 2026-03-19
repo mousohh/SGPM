@@ -71,7 +71,9 @@ export default function MapaMaquinas() {
     // Incluir TODAS las máquinas (activas e inactivas) para mostrar en el mapa
     setMaquinas(Array.isArray(maqData) ? maqData : [])
     const parosMap = {}
-    parosData.forEach(p => { parosMap[p.maquina_id] = { ...p, segundos: p.segundos_transcurridos || 0 } })
+    if (Array.isArray(parosData)) {
+      parosData.forEach(p => { parosMap[p.maquina_id] = { ...p, segundos: p.segundos_transcurridos || 0 } })
+    }
     setParosActivos(parosMap)
     await cargarResumenDia()
   }
