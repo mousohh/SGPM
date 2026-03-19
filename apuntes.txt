@@ -1,0 +1,5 @@
+pm2 status          # Ver estado del servicio
+pm2 restart sgpm    # Reiniciar después de cambios
+pm2 stop sgpm       # Detener el servicio
+pm2 logs sgpm       # Ver logs en tiempo real
+pm2 monit           # Monitor visual en tiempo real

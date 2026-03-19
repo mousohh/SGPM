@@ -1,0 +1,215 @@
+@import "tailwindcss";
+
+/* =========================================
+   SGPM — Paleta profesional verde
+   ========================================= */
+
+:root {
+  --bg:         #f0f7f0;
+  --bg-soft:    #e4f0e7;
+  --card:       #ffffff;
+  --card-alt:   #f7fbf7;
+  --primary:    #1a6b3c;
+  --primary-hi: #2e9e5b;
+  --dark:       #0d3d22;
+  --dark-mid:   #134d2b;
+  --text:       #0d3d22;
+  --text-mid:   rgba(13,61,34,0.70);
+  --text-dim:   rgba(13,61,34,0.45);
+  --border:     rgba(13,61,34,0.12);
+  --border-mid: rgba(13,61,34,0.20);
+}
+
+/* ── App base ── */
+body, #root {
+  background-color: var(--bg) !important;
+  color: var(--text) !important;
+  max-width: 100% !important;
+  padding: 0 !important;
+  text-align: left !important;
+}
+
+/* ── Fondos oscuros ── */
+.bg-slate-900 { background-color: var(--dark) !important; }
+.bg-slate-800 { background-color: var(--dark-mid) !important; }
+.bg-slate-700 { background-color: var(--primary) !important; }
+.bg-slate-600 { background-color: var(--primary) !important; }
+
+/* ── Fondos claros ── */
+.bg-slate-100, .bg-slate-50 { background-color: var(--card-alt) !important; }
+.bg-slate-200               { background-color: var(--bg-soft) !important; }
+.bg-white                   { background-color: var(--card) !important; }
+
+/* ── Fondos azul → verde ── */
+.bg-blue-600, .bg-blue-700 { background-color: var(--primary) !important; }
+.bg-blue-500               { background-color: var(--primary-hi) !important; }
+.bg-blue-50, .bg-blue-100  { background-color: var(--card-alt) !important; }
+
+/* ── Fondos naranja ── */
+.bg-orange-500, .bg-orange-600 { background-color: var(--primary) !important; }
+.bg-orange-50                  { background-color: #fff8f0 !important; }
+
+/* ── Fondos amarillo ── */
+.bg-yellow-400, .bg-yellow-500 { background-color: #f59e0b !important; }
+.bg-yellow-50                  { background-color: #fffbeb !important; }
+
+/* ── Fondos verde ── */
+.bg-green-600, .bg-green-700 { background-color: var(--primary) !important; }
+.bg-green-500, .bg-green-400 { background-color: var(--primary-hi) !important; }
+.bg-green-50                 { background-color: #f0fdf4 !important; }
+
+/* ── Fondos púrpura ── */
+.bg-purple-50  { background-color: var(--card-alt) !important; }
+.bg-purple-600 { background-color: var(--primary) !important; }
+
+/* ── Texto en vistas claras ── */
+.text-slate-800 { color: var(--text) !important; }
+.text-slate-700 { color: var(--text) !important; }
+.text-slate-600 { color: var(--text-mid) !important; }
+.text-slate-500 { color: var(--text-mid) !important; }
+.text-slate-400 { color: var(--text-dim) !important; }
+.text-slate-300 { color: var(--text-dim) !important; }
+
+.text-blue-600, .text-blue-700 { color: var(--primary) !important; }
+.text-blue-500, .text-blue-400 { color: var(--primary-hi) !important; }
+.text-blue-300                 { color: var(--text-dim) !important; }
+
+.text-orange-700, .text-orange-600 { color: #c2410c !important; }
+.text-orange-400, .text-orange-300 { color: #ea580c !important; }
+
+.text-green-700, .text-green-600 { color: var(--primary) !important; }
+.text-green-400                  { color: var(--primary-hi) !important; }
+
+.text-purple-600, .text-purple-400 { color: var(--primary) !important; }
+.text-yellow-600, .text-yellow-700 { color: #b45309 !important; }
+
+/* ── Texto blanco explícito ── */
+.text-white { color: #ffffff !important; }
+
+/* ── Sidebar ── */
+aside, aside *, aside button, aside a, aside span, aside p {
+  color: #ffffff !important;
+}
+
+/* ─────────────────────────────────────────────────────
+   PÁGINAS OSCURAS: Login y Panel de Mantenimiento
+   Usamos clases identificadoras únicas en cada página
+   ───────────────────────────────────────────────────── */
+
+/* Todo el texto blanco dentro de estas páginas */
+.pagina-login *,
+.pagina-mantenimiento * {
+  color: #ffffff !important;
+}
+
+/* Excepción: tarjetas blancas dentro del panel de mantenimiento */
+.pagina-mantenimiento .bg-red-50,
+.pagina-mantenimiento .bg-red-50 *,
+.pagina-mantenimiento .bg-orange-50,
+.pagina-mantenimiento .bg-orange-50 *,
+.pagina-mantenimiento .bg-yellow-50,
+.pagina-mantenimiento .bg-yellow-50 *,
+.pagina-mantenimiento .bg-blue-50,
+.pagina-mantenimiento .bg-blue-50 *,
+.pagina-mantenimiento .bg-white,
+.pagina-mantenimiento .bg-white *,
+.pagina-mantenimiento .bg-slate-50,
+.pagina-mantenimiento .bg-slate-50 * {
+  color: var(--text) !important;
+}
+
+/* Restaurar colores de estado dentro del panel */
+.pagina-mantenimiento .text-red-600,
+.pagina-mantenimiento .text-red-700   { color: #dc2626 !important; }
+.pagina-mantenimiento .text-red-400   { color: #f87171 !important; }
+.pagina-mantenimiento .text-red-500   { color: #ef4444 !important; }
+.pagina-mantenimiento .text-orange-600 { color: #ea580c !important; }
+.pagina-mantenimiento .text-orange-400 { color: #fb923c !important; }
+.pagina-mantenimiento .text-yellow-600 { color: #ca8a04 !important; }
+.pagina-mantenimiento .text-green-400  { color: #4ade80 !important; }
+.pagina-mantenimiento .text-blue-400   { color: #60a5fa !important; }
+.pagina-mantenimiento .text-purple-600 { color: #9333ea !important; }
+.pagina-mantenimiento .text-purple-400 { color: #c084fc !important; }
+.pagina-mantenimiento .text-slate-400  { color: rgba(255,255,255,0.5) !important; }
+.pagina-mantenimiento .text-slate-500  { color: rgba(255,255,255,0.4) !important; }
+
+/* Texto blanco dentro de banners de urgencia */
+.pagina-mantenimiento .bg-red-600 *,
+.pagina-mantenimiento .bg-orange-500 *,
+.pagina-mantenimiento .bg-yellow-500 *,
+.pagina-mantenimiento .bg-blue-500 * {
+  color: #ffffff !important;
+}
+
+/* Excepción login: tarjeta interna bg-slate-800 conserva texto blanco,
+   pero el error en rojo debe verse */
+.pagina-login .text-red-400 { color: #f87171 !important; }
+
+/* ── Bordes ── */
+.border-slate-700, .border-slate-800 { border-color: var(--border-mid) !important; }
+.border-slate-600                    { border-color: var(--border-mid) !important; }
+.border-slate-200, .border-slate-300 { border-color: var(--border) !important; }
+.border-slate-100                    { border-color: rgba(13,61,34,0.07) !important; }
+.border-blue-500, .border-blue-600   { border-color: var(--primary) !important; }
+.border-blue-200                     { border-color: var(--border) !important; }
+.border-orange-200                   { border-color: #fed7aa !important; }
+.border-green-200                    { border-color: #bbf7d0 !important; }
+.border-purple-200                   { border-color: var(--border) !important; }
+.border-yellow-200                   { border-color: #fde68a !important; }
+
+/* ── Hover ── */
+.hover\:bg-slate-800:hover { background-color: var(--primary) !important; }
+.hover\:bg-slate-700:hover { background-color: var(--primary-hi) !important; }
+.hover\:bg-blue-700:hover  { background-color: var(--dark-mid) !important; }
+
+/* ── Inputs globales ── */
+input, textarea, select {
+  background-color: var(--card) !important;
+  border-color: var(--border-mid) !important;
+  color: var(--text) !important;
+}
+input::placeholder, textarea::placeholder { color: var(--text-dim) !important; }
+input:focus, textarea:focus, select:focus {
+  border-color: var(--primary-hi) !important;
+  outline: none !important;
+  box-shadow: 0 0 0 3px rgba(46,158,91,0.15) !important;
+}
+
+/* ── Inputs en fondos oscuros ── */
+.pagina-login input, .pagina-login textarea,
+.pagina-mantenimiento input, .pagina-mantenimiento textarea {
+  background-color: rgba(255,255,255,0.10) !important;
+  color: #ffffff !important;
+  border-color: rgba(255,255,255,0.25) !important;
+}
+.pagina-login input::placeholder,
+.pagina-mantenimiento input::placeholder,
+.pagina-mantenimiento textarea::placeholder { color: rgba(255,255,255,0.40) !important; }
+
+/* Pero el textarea del modal (fondo blanco) debe tener texto oscuro */
+.pagina-mantenimiento .bg-white textarea,
+.pagina-mantenimiento .bg-white input {
+  background-color: var(--card) !important;
+  color: var(--text) !important;
+  border-color: var(--border-mid) !important;
+}
+
+/* ── Divisores ── */
+.divide-slate-100 > * + * { border-color: rgba(13,61,34,0.07) !important; }
+.divide-y > * + *          { border-color: var(--border) !important; }
+
+/* ── Colores de estado — nunca sobreescribir en vistas normales ── */
+.border-red-400   { border-color: #f87171 !important; }
+.border-red-300   { border-color: #fca5a5 !important; }
+.border-green-300 { border-color: #86efac !important; }
+.border-green-400 { border-color: #4ade80 !important; }
+.bg-red-50        { background-color: #fef2f2 !important; }
+.bg-green-50      { background-color: #f0fdf4 !important; }
+.text-red-600, .text-red-700 { color: #dc2626 !important; }
+.text-red-500   { color: #ef4444 !important; }
+.text-green-600 { color: #16a34a !important; }
+.text-green-500 { color: #22c55e !important; }
+.bg-red-500     { background-color: #ef4444 !important; }
+.bg-red-600     { background-color: #dc2626 !important; }
+.bg-green-500   { background-color: #22c55e !important; }
+.bg-green-600   { background-color: #16a34a !important; }
